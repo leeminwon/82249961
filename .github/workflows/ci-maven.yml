@@ -35,7 +35,7 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: ${{ secrets.cepg82249961acr.azurecr.io }}
-        username: ${{ secrets.admin }}
+        username: ${{ secrets.cepg82249961acr }}
         password: ${{ secrets.2yE+2SiHlh7fQWj2IAnWD7pc1fJEOp3juWfS2S15io+ACRAYQEHp }}
 
     - name: 'Build & Tag Image'
@@ -47,7 +47,7 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: ${{ secrets.cepg82249961acr.azurecr.io }}
-        username: ${{ secrets.admin }}
+        username: ${{ secrets.cepg82249961acr }}
         password: ${{ secrets.2yE+2SiHlh7fQWj2IAnWD7pc1fJEOp3juWfS2S15io+ACRAYQEHp }}
     
     - run: |
