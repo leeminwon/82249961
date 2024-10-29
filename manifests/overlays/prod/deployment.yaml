@@ -1,0 +1,32 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: 82249961
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: "82249961" 
+          command: ["java","-jar","/app.jar"]
+          args: ["--spring.config.location=file:/config/application.yml"]
+          volumeMounts:
+          - mountPath: /mnt/cloud-sample
+            name: "82249961-volume"
+            readOnly: false
+            subPath: cloud-sample
+          - mountPath: /config
+            name: application-properties
+            readOnly: true
+                          
+      volumes:
+      - name: "82249961-volume"
+        persistentVolumeClaim:
+          claimName: cepg-aa-std-pvc
+      - name: application-properties
+        configMap:
+          name: "82249961-configmap"
+          items:
+            - key: application.yml
+              path: application.yml
+          defaultMode: 420

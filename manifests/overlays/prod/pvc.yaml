@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cepg-aa-std-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: cepg-aa-std-rwmany
+  resources:
+    requests:
+      storage: 1Gi
