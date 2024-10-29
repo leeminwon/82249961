@@ -12,7 +12,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namePrefix: prod-
 images:
-- name: cepg82249961acr.azurecr.io/82249961
-  newTag: "202410240548"
 - name: cepgstapacr.azurecr.io/82249961
   newTag: "202410290700"
