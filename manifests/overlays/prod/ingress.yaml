@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: "82249961-ingress"
 spec:
-  ingressClassName: ingress-internal
+  ingressClassName: nginx
   rules:
   - host: "cepg-82249961-sa.kubepia.net"
     http:
